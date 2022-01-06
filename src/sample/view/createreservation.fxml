@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="431.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CreateReservationController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: lightyellow;" text="Back">
+                     <effect>
+                        <InnerShadow />
+                     </effect></Button>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="p1bookBtn" mnemonicParsing="false" onAction="#bookBtnClicked" text="Boka" visible="false">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <HBox>
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btn_sign_out" mnemonicParsing="false" onAction="#logOutBtnClicked" style="-fx-background-color: lightyellow;" text="Sign out">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <VBox alignment="TOP_RIGHT">
+                     <children>
+                        <Label fx:id="starNrTravelers" text="* Fyll i antal resenärer" textFill="#fc0000" visible="false">
+                           <VBox.margin>
+                              <Insets right="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="starFirst" text="*" textFill="#fc0000" visible="false">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="12.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="starLast" text="*" textFill="#fc0000" visible="false">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="11.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="starPnr" text="*" textFill="#fc0000" visible="false">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="starAdress" text="*" textFill="#fc0000" visible="false">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="starPhone" text="*" textFill="#fc0000" visible="false">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="starEmail" text="*" textFill="#fc0000" visible="false">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="232.0" prefWidth="405.0">
+                     <children>
+                        <Label fx:id="create_res" text="Create Reservation">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Times New Roman Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label text="First Name" />
+                        <TextField fx:id="user_nameTxt" onAction="#nextBtnClicked" style="-fx-background-color: lightblue;">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="Last Name" />
+                        <TextField fx:id="user_Lname" style="-fx-background-color: lightblue;" />
+                        <Label text="User Adress" />
+                        <TextField fx:id="user_adress" style="-fx-background-color: lightblue;" />
+                        <Region prefHeight="72.0" prefWidth="405.0" />
+                        <ComboBox fx:id="methode" onAction="#methode_choosed" prefWidth="150.0" promptText="Payment Methode" style="-fx-background-color: lightblue;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow />
+                           </effect></ComboBox>
+                        <Region prefHeight="72.0" prefWidth="405.0" />
+                        <Region prefHeight="84.0" prefWidth="406.0" />
+                        <Region prefHeight="0.0" prefWidth="405.0" />
+                        <DatePicker fx:id="from_picker" onAction="#from_picker_chosed" promptText="From" />
+                        <Region prefHeight="57.0" prefWidth="405.0" />
+                        <DatePicker fx:id="to_picker" onAction="#to_picker_choosed" promptText="To" />
+                        <Region prefHeight="80.0" prefWidth="406.0" />
+                        <ComboBox fx:id="room_NMR" onAction="#room_choosed" prefWidth="150.0" promptText="Room Number" style="-fx-background-color: lightblue;" visibleRowCount="50">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin></ComboBox>
+                        <Region prefHeight="78.0" prefWidth="405.0" />
+                        <Region prefHeight="57.0" prefWidth="405.0" />
+                        <Region prefHeight="19.0" prefWidth="406.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <CheckBox fx:id="paid_box" mnemonicParsing="false" onMouseClicked="#paid_clicked" text="Paid" />
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                              <CheckBox fx:id="nPaid_box" mnemonicParsing="false" onMouseClicked="#nPaid_clicked" text="Not Paid" />
+                           </children>
+                        </HBox>
+                        <Region VBox.vgrow="ALWAYS" />
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" />
+                        <Region prefHeight="57.0" prefWidth="405.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="5.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </VBox>
+                  <Region HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+      <Button fx:id="p1nextBtn" layoutX="519.0" layoutY="406.0" mnemonicParsing="false" onAction="#addBtnClicked" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: yellow;" text="Add">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+   </children>
+</AnchorPane>

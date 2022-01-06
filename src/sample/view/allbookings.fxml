@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="581.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AllBookingsController">
+   <children>
+      <BorderPane layoutX="-2.0" layoutY="21.0" prefHeight="506.0" prefWidth="766.0">
+         <center>
+            <HBox prefHeight="370.0" prefWidth="746.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane prefHeight="370.0" prefWidth="87.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="179.60001220703126" minHeight="10.0" prefHeight="25.599986648559565" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="459.200004196167" minHeight="10.0" prefHeight="449.60001335144045" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ComboBox fx:id="room_box" onAction="#roomChoosed" prefWidth="150.0" promptText="Room" style="-fx-background-color: lightblue;">
+                           <effect>
+                              <InnerShadow />
+                           </effect></ComboBox>
+                     </children>
+                  </GridPane>
+                  <ListView fx:id="res_number" onMouseClicked="#res_nmr_clicked" prefHeight="370.0" prefWidth="126.0" />
+                  <ListView fx:id="user_list" prefHeight="370.0" prefWidth="154.0" />
+                  <ListView fx:id="date_list" prefHeight="370.0" prefWidth="194.0" />
+                  <ListView fx:id="paymentMethodeList" prefHeight="370.0" prefWidth="132.0" />
+                  <ListView fx:id="status_list" prefHeight="370.0" prefWidth="74.0" />
+               </children>
+            </HBox>
+         </center>
+         <top>
+            <GridPane prefHeight="30.0" prefWidth="639.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="461.0" minWidth="10.0" prefWidth="214.999951171875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="183.000048828125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="154.99996337890627" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.20001220703125" minWidth="10.0" prefWidth="119.79999999999995" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.20001220703125" minWidth="10.0" prefWidth="52.00002441406252" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Date" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="18.0" prefWidth="141.0" text="Payment Methode" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <GridPane prefHeight="30.0" prefWidth="304.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.40001678466797" minWidth="10.0" prefWidth="61.19998550415039" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.39996337890625" minWidth="10.0" prefWidth="95.60001449584962" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="12.000006103515625" minHeight="9.599996948242188" prefHeight="12.000006103515625" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="11.200003051757813" minHeight="4.0000112533569325" prefHeight="7.200009155273436" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="13.599988746643067" minHeight="8.799993896484375" prefHeight="10.399990844726563" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="go_back" mnemonicParsing="false" onMouseClicked="#back_clicked" style="-fx-background-color: lightyellow;" text="Back" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Label prefHeight="18.0" prefWidth="86.0" text="Number" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <Label text="Status" GridPane.columnIndex="4" />
+                  <Label prefHeight="18.0" prefWidth="84.0" text="User" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+               </children>
+            </GridPane>
+         </top>
+      </BorderPane>
+      <Label fx:id="note_txt" layoutX="159.0" layoutY="537.0" text="Please click on the reservation number to modify it">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

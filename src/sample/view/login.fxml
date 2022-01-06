@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="957.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LogInController">
+   <center>
+      <HBox prefHeight="800.0" prefWidth="641.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="900.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../shared/hotel.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="-33.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="673.0" prefWidth="469.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="281.0" text="Welcome to Hotel Reservation System" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="-1111.0" right="55.0" top="15.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="-30.0" left="-38.0" right="-22.0" top="22.0" />
+                     </padding>
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="wrongPass" textFill="RED">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="-900.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="tUname" prefHeight="27.0" prefWidth="275.0" promptText="User Name" style="-fx-background-radius: 30;">
+                     <VBox.margin>
+                        <Insets bottom="6.0" left="-650.0" right="555.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <PasswordField fx:id="tPword" prefHeight="27.0" prefWidth="137.0" promptText="Password" style="-fx-background-radius: 30;">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="-650.0" right="555.0" top="2.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Button fx:id="logInBtn" mnemonicParsing="false" onMouseClicked="#loginBtnClicked" prefHeight="35.0" prefWidth="83.0" style="-fx-background-radius: 20; -fx-background-color: yellow;" text="Login">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="-700.0" right="500.0" top="-22.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="reset" mnemonicParsing="false" onAction="#reset_pass_clicked" prefHeight="33.0" prefWidth="124.0" style="-fx-background-radius: 20; -fx-background-color: lightblue;" text="Reset Password">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="-700.0" right="500.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect></Button>
+                  <Button fx:id="exitBtn" mnemonicParsing="false" onAction="#exitBtnClicked" prefHeight="35.0" prefWidth="78.0" style="-fx-background-radius: 20; -fx-background-color: lightyellow;" text="Close" textFill="#030303">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="-700.0" right="500.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="8.0" left="-500.0" right="350.0" top="-180.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="33.0" left="-77.0" right="33.0" top="22.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

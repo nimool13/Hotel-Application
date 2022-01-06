@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.DeleteRoomController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: lightyellow;" text="Back">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Region HBox.hgrow="ALWAYS" />
+            <Region HBox.hgrow="ALWAYS" />
+            <HBox>
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btn_sign_out" mnemonicParsing="false" onAction="#logOutBtnClicked" style="-fx-background-color: lightyellow;" text="Sign out">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Region HBox.hgrow="ALWAYS" />
+            <VBox alignment="TOP_RIGHT">
+               <children>
+                  <Label fx:id="starNrTravelers" text="* Fyll i antal resenärer" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets right="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starFirst" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="12.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starLast" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="11.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starPnr" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starAdress" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starPhone" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starEmail" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="232.0" prefWidth="405.0">
+               <children>
+                  <Label text="Delete Room">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="rooms" onAction="#room_Choosed" prefWidth="150.0" promptText="Rooms" style="-fx-background-color: lightblue;">
+                     <effect>
+                        <InnerShadow />
+                     </effect></ComboBox>
+                  <Region VBox.vgrow="ALWAYS" />
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="p1nextBtn" mnemonicParsing="false" onAction="#submBtnClicked" style="-fx-background-color: yellow;" text="Submit">
+                           <effect>
+                              <InnerShadow />
+                           </effect></Button>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="15.0" left="5.0" right="15.0" top="15.0" />
+               </HBox.margin>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

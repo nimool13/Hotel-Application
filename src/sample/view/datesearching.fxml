@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.DateSearchingController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="852.0">
+         <children>
+            <BorderPane layoutX="-2.0" layoutY="37.0" prefHeight="506.0" prefWidth="852.0">
+               <center>
+                  <HBox prefHeight="370.0" prefWidth="746.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane prefHeight="476.0" prefWidth="156.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="179.60001220703126" minHeight="0.0" prefHeight="36.199999999999996" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="179.60001220703126" minHeight="0.0" prefHeight="36.199999999999996" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="459.200004196167" minHeight="0.0" prefHeight="9.400006103515622" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="459.200004196167" minHeight="10.0" prefHeight="51.200006103515626" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="459.200004196167" minHeight="10.0" prefHeight="379.9999938964844" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <DatePicker fx:id="date_from_picker" promptText="From" />
+                                 </children>
+                              </VBox>
+                              <Button fx:id="search_btn" mnemonicParsing="false" onAction="#searchBtn_clicked" prefHeight="38.0" prefWidth="152.0" style="-fx-background-color: lightblue;" text="Search" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                              <DatePicker fx:id="date_to_picker" promptText="To" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <ListView fx:id="res_number" onMouseClicked="#res_nmr_clicked" prefHeight="476.0" prefWidth="135.0" />
+                        <ListView fx:id="user_list" prefHeight="370.0" prefWidth="154.0" />
+                        <ListView fx:id="date_list" prefHeight="476.0" prefWidth="194.0" />
+                        <ListView fx:id="status_list" prefHeight="476.0" prefWidth="110.0" />
+                        <ListView fx:id="roomNumber_list" prefHeight="476.0" prefWidth="114.0" />
+                     </children>
+                  </HBox>
+               </center>
+               <top>
+                  <GridPane prefHeight="30.0" prefWidth="639.0" BorderPane.alignment="CENTER">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="461.0" minWidth="10.0" prefWidth="310.1999877929687" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="164.60001220703123" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="139.79998779296875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.20001220703125" minWidth="10.0" prefWidth="74.39997558593745" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.20001220703125" minWidth="10.0" prefWidth="83.19997558593752" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Date" GridPane.columnIndex="2" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="30.0" prefWidth="304.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.40001678466797" minWidth="10.0" prefWidth="61.19998550415039" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.39996337890625" minWidth="10.0" prefWidth="95.60001449584962" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="12.000006103515625" minHeight="9.599996948242188" prefHeight="12.000006103515625" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="11.200003051757813" minHeight="4.0000112533569325" prefHeight="7.200009155273436" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="13.599988746643067" minHeight="8.799993896484375" prefHeight="10.399990844726563" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="86.0" text="Number" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <Label text="Status" GridPane.columnIndex="3" />
+                        <Label prefHeight="18.0" prefWidth="84.0" text="User" GridPane.columnIndex="1" />
+                        <Label text="Room number" GridPane.columnIndex="4" />
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" />
+                     </padding>
+                  </GridPane>
+               </top>
+            </BorderPane>
+            <Button fx:id="go_back" layoutX="1.0" layoutY="-2.0" mnemonicParsing="false" onMouseClicked="#back_clicked" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: lightyellow;" text="Back">
+               <effect>
+                  <InnerShadow />
+               </effect></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

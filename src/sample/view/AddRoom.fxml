@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AddRoomController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: lightyellow;" text="Back">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect></Button>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="p1bookBtn" mnemonicParsing="false" onAction="#bookBtnClicked" text="Boka" visible="false">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Region HBox.hgrow="ALWAYS" />
+            <HBox>
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btn_sign_out" mnemonicParsing="false" onAction="#logOutBtnClicked" style="-fx-background-color: lightyellow; -fx-background-radius: 30;" text="Sign out" textFill="#0a0a0a">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Times New Roman Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Region HBox.hgrow="ALWAYS" />
+            <VBox alignment="TOP_RIGHT">
+               <children>
+                  <Label fx:id="starNrTravelers" text="* Fyll i antal resenärer" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets right="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starFirst" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="12.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starLast" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="11.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starPnr" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starAdress" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starPhone" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="starEmail" text="*" textFill="#fc0000" visible="false">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="232.0" prefWidth="405.0">
+               <children>
+                  <Label text="Add Room">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Room Number" />
+                  <TextField fx:id="room_nr_txt" onAction="#nextBtnClicked" style="-fx-background-color: lightblue; -fx-background-radius: 20;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Location" />
+                  <TextField fx:id="room_location_txt" onAction="#nextBtnClicked" style="-fx-background-color: lightblue; -fx-background-radius: 20;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Room Size" />
+                  <TextField fx:id="room_size_txt" onAction="#nextBtnClicked" style="-fx-background-color: lightblue; -fx-background-radius: 20;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Room Type" />
+                  <TextField fx:id="room_type_txt" onAction="#nextBtnClicked" style="-fx-background-color: lightblue; -fx-background-radius: 20;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Room Details" />
+                  <TextArea fx:id="room_det_txt" prefHeight="39.0" prefWidth="383.0" style="-fx-background-color: lightblue;">
+                     <VBox.margin>
+                        <Insets bottom="11.0" right="5.0" top="6.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></TextArea>
+                  <ComboBox fx:id="Beds" onAction="#beds_choosed" prefHeight="26.0" prefWidth="269.0" promptText="Beds" style="-fx-background-radius: 20; -fx-background-color: lightblue;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ComboBox>
+                  <ComboBox fx:id="status_Box" onAction="#status_choosed" prefHeight="26.0" prefWidth="270.0" promptText="Status" style="-fx-background-radius: 20; -fx-background-color: lightblue;">
+                     <VBox.margin>
+                        <Insets bottom="-7.0" right="9.0" />
+                     </VBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect></ComboBox>
+                  <Region prefHeight="62.0" prefWidth="406.0" />
+                  <Region VBox.vgrow="ALWAYS" />
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="18.0" prefWidth="406.0">
+                     <children>
+                        <Button fx:id="p1nextBtn" mnemonicParsing="false" onAction="#addBtnClicked" prefHeight="35.0" prefWidth="69.0" style="-fx-background-color: yellow; -fx-background-radius: 30;" text="Add">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets bottom="22.0" top="11.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets bottom="11.0" right="11.0" top="11.0" />
+                           </HBox.margin>
+                           <effect>
+                              <InnerShadow />
+                           </effect></Button>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="15.0" left="5.0" right="15.0" top="15.0" />
+               </HBox.margin>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
